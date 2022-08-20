@@ -70,11 +70,11 @@
                                         <rect key="frame" x="0.0" y="302.5" width="305" height="0.0"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Play Again?">
+                                        <buttonConfiguration key="configuration" style="plain" title="Reset the Score">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="playAgainClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kjm-c5-5TF"/>
+                                            <action selector="resetTheScoreClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hK4-rI-uES"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -82,19 +82,39 @@
                                     <constraint firstAttribute="height" constant="302.5" id="hUa-8e-Aup"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PUg-PK-SWs">
+                                <rect key="frame" x="20" y="44" width="109.5" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Robot: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGi-NH-665">
+                                        <rect key="frame" x="0.0" y="0.0" width="109.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iar-qb-LLN">
+                                        <rect key="frame" x="0.0" y="44" width="109.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="PUg-PK-SWs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CV0-UX-KA1"/>
                             <constraint firstItem="v65-ns-fHS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jKe-Vz-Bhd"/>
+                            <constraint firstItem="PUg-PK-SWs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y8c-QF-oVL"/>
                             <constraint firstItem="v65-ns-fHS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yeq-q4-Yfe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="KBY-SF-Byq"/>
-                        <outlet property="playAgainButton" destination="W6C-N5-5Pd" id="fKk-lo-RF3"/>
-                        <outlet property="robotLabel" destination="FlI-NK-XvN" id="6dL-KD-DEi"/>
+                        <outlet property="resetTheScoreButton" destination="W6C-N5-5Pd" id="Zi7-ez-qET"/>
+                        <outlet property="robotScoreLabel" destination="jGi-NH-665" id="zcM-fs-QKk"/>
                         <outlet property="rockPaperScissorsLabel" destination="l1m-3L-xqK" id="b3b-ix-pDp"/>
+                        <outlet property="youScoreLabel" destination="iar-qb-LLN" id="L6r-DY-PJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

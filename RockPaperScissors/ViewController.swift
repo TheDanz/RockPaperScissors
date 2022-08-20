@@ -2,15 +2,19 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet var mainView: UIView!
-    @IBOutlet weak var robotLabel: UILabel!
     @IBOutlet weak var rockPaperScissorsLabel: UILabel!
-    @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet weak var resetTheScoreButton: UIButton!
+    @IBOutlet weak var robotScoreLabel: UILabel!
+    @IBOutlet weak var youScoreLabel: UILabel!
+    
+    var robotScore: Int = 0
+    var youScore: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func playAgainClick(_ sender: Any) {
+    @IBAction func resetTheScoreClick(_ sender: Any) {
         screenUpdate(state: .start)
     }
     
@@ -35,20 +39,28 @@ class ViewController: UIViewController {
     func screenUpdate(state: GameState) {
         switch state {
         case .firstWon:
+            youScore += 1
+            youScoreLabel.text = "You: \(youScore)"
             mainView.backgroundColor = .green
-            playAgainButton.isHidden = false
+            resetTheScoreButton.isHidden = false
             rockPaperScissorsLabel.text = "You Won!"
         case .secondWon:
+            robotScore += 1
+            robotScoreLabel.text = "Robot: \(robotScore)"
             mainView.backgroundColor = .red
-            playAgainButton.isHidden = false
+            resetTheScoreButton.isHidden = false
             rockPaperScissorsLabel.text = "You Lose!"
         case .draw:
             mainView.backgroundColor = .gray
-            playAgainButton.isHidden = false
+            resetTheScoreButton.isHidden = false
             rockPaperScissorsLabel.text = "It's draw!"
         case .start:
+            youScore = 0
+            robotScore = 0
+            youScoreLabel.text = "You: 0"
+            robotScoreLabel.text = "Robot: 0"
             mainView.backgroundColor = .white
-            playAgainButton.isHidden = true
+            resetTheScoreButton.isHidden = true
             rockPaperScissorsLabel.text = "Rock, Paper, Scissors?"
         }
     }
