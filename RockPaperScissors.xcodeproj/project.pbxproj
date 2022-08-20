@@ -13,6 +13,8 @@
 		052760AB28B12D2F00F0B489 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052760A928B12D2F00F0B489 /* Main.storyboard */; };
 		052760AD28B12D3100F0B489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 052760AC28B12D3100F0B489 /* Assets.xcassets */; };
 		052760B028B12D3200F0B489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052760AE28B12D3200F0B489 /* LaunchScreen.storyboard */; };
+		052760B828B146F200F0B489 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052760B728B146F200F0B489 /* Sign.swift */; };
+		052760BA28B1475800F0B489 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052760B928B1475800F0B489 /* GameState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		052760AC28B12D3100F0B489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		052760AF28B12D3200F0B489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		052760B128B12D3200F0B489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		052760B728B146F200F0B489 /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
+		052760B928B1475800F0B489 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +62,12 @@
 			children = (
 				052760A328B12D2F00F0B489 /* AppDelegate.swift */,
 				052760A528B12D2F00F0B489 /* SceneDelegate.swift */,
+				052760B728B146F200F0B489 /* Sign.swift */,
+				052760B928B1475800F0B489 /* GameState.swift */,
 				052760A728B12D2F00F0B489 /* ViewController.swift */,
 				052760A928B12D2F00F0B489 /* Main.storyboard */,
-				052760AC28B12D3100F0B489 /* Assets.xcassets */,
 				052760AE28B12D3200F0B489 /* LaunchScreen.storyboard */,
+				052760AC28B12D3100F0B489 /* Assets.xcassets */,
 				052760B128B12D3200F0B489 /* Info.plist */,
 			);
 			path = RockPaperScissors;
@@ -140,6 +146,8 @@
 			files = (
 				052760A828B12D2F00F0B489 /* ViewController.swift in Sources */,
 				052760A428B12D2F00F0B489 /* AppDelegate.swift in Sources */,
+				052760BA28B1475800F0B489 /* GameState.swift in Sources */,
+				052760B828B146F200F0B489 /* Sign.swift in Sources */,
 				052760A628B12D2F00F0B489 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
