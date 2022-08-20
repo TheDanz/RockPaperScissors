@@ -1,5 +1,5 @@
 enum GameState {
-    case firstWon, secondWon, draw
+    case start, firstWon, secondWon, draw
     
     init(firstSign: Sign, secondSigh: Sign) {
         switch firstSign {
